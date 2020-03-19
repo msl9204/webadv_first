@@ -1,0 +1,31 @@
+doctype html
+html(lang='ko')
+    head
+        title="profile"
+        link(rel="stylesheet", href="/css/bootstrap.min.css")
+        script(src="/js/bootstrap.min.js")
+
+    body
+        article.container-sm(class=['table-bordered'] style={padding:'30px', position:'absolute', top:'50%', left:'50%', transform: 'translate(-50%, -50%)', width:'500px', 'box-shadow':'1px 2px 4px rgba(0, 0, 0, .5)'})
+            h1(style='margin:0 0 20px 0') Homework 1
+            table.table
+                thead
+                    tbody
+                        tr
+                            th(scope='cols' style={'vertical-align': 'middle', 'text-align':'center'}) Photo
+                            td
+                                img(src='/images/lion.jpg' width='40%')
+                    tbody
+                        tr
+                            th(scope='cols' style='text-align:center') 이름
+                            td 이민수
+                    tbody
+                        tr
+                            th(scope='cols' style='text-align:center') 학번
+                            td 60160827
+
+            h5(style='margin:0 0 10px 20px') 하고싶은 말
+            form(action="/form-data", method="post")
+                input(type="text" name='inputbox' style='margin: 0px 20px 0px 20px')
+                p
+                input(class='btn btn-primary' type="submit" value="전송" style='margin: 0px 20px 0px 20px')
